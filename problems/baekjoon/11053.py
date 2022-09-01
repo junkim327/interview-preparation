@@ -2,11 +2,11 @@
 
 n = int(input()) # length
 seq = list(map(int, input().split())) # sequence
-longest_len = [1] * n
+cur_max_len = [1] * n
 
 for i in range(n):
     for j in range(i):
         if seq[j] < seq[i]:
-            longest_len[i] = max(longest_len[i], longest_len[j] + 1)
+            cur_max_len[i] = max(cur_max_len[i], cur_max_len[j] + 1)
 
-print(max(longest_len))
+print(max(cur_max_len))

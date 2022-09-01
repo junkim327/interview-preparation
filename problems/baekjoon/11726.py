@@ -4,7 +4,6 @@ def bottom_up(n):
     a[1], a[2] = 1, 2
     for i in range(3, n+1):
         a[i] = a[i-1] + a[i-2]
-        print('i:', i, 'ai:', a[i])
 
     return a[n] % 10007
 

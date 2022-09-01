@@ -7,7 +7,7 @@ def next_permutation(a, n):
     while a[j] <= a[i-1]: j -= 1
     a[i-1], a[j] = a[j], a[i-1]
     j = n - 1
-    while (i < j):
+    while i < j:
         a[i], a[j] = a[j], a[i]
         i += 1
         j -= 1
