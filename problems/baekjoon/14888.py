@@ -15,6 +15,7 @@ def main():
         nonlocal n
         if i == n:
             res.append(cur)
+            return
 
         if plus > 0:
             solve(i + 1, cur + a[i], plus - 1, minus, mul, div)
