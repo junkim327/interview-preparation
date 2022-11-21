@@ -6,7 +6,8 @@ def solve():
     n, m = map(int, input().split())
     snakes_and_ladders_dict = {k: v for k, v in list(map(int, input().split()) for _ in range(n + m))}
 
-    d = [0] * 101
+    d = [-1] * 101
+    d[1] = 0
     q = deque()
     q.append(1)
     while q:
@@ -17,7 +18,7 @@ def solve():
                 print(d[block] + 1)
                 return
             
-            if next_block < 100 and d[next_block] == 0:
+            if next_block < 100 and d[next_block] == -1:
                 q.append(next_block)
                 d[next_block] = d[block] + 1
 
