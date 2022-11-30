@@ -32,11 +32,12 @@ def solve():
         if str1[i] == str2[j]:
             print(str1[i], end='')
         if p[i][j] == 1:
-            i, j = i + 1, j + 1
+            i += 1
+            j += 1
         elif p[i][j] == 2:
-            i, j = i + 1, j
+            i += 1
         elif p[i][j] == 3:
-            i, j = i, j + 1
+            j += 1
     
     print()
     
